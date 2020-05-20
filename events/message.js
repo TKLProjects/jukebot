@@ -34,7 +34,7 @@ module.exports = async (client, message) => {
   }
 
   message.author.permLevel = level;
-
+  
   message.flags = [];
   while (args[0] && args[0][0] === "-") {
     message.flags.push(args.shift().slice(1));
