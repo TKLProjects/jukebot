@@ -1,5 +1,5 @@
 exports.run = async (client, message, args, level) => {
-    message.channel.send("https://github.com/keanuplayz/TravBot");
+    message.channel.send("https://github.com/TKLProjects/jukebot");
 }
 
 exports.conf = {
