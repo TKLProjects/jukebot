@@ -4,8 +4,10 @@ exports.run = async (client, message, args, level) => {
         client.user.setActivity(args.join(" "));
     } else {
         message.delete();
-        client.user.setActivity('.help', { type: 'LISTENING' });
-    } 
+        client.user.setActivity('.help', {
+            type: 'LISTENING'
+        });
+    }
 
 }
 

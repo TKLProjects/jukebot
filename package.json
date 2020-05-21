@@ -1,41 +1,41 @@
 {
-  "name": "jukebot",
-  "version": "0.0.1",
-  "description": "A jukebox bot for SMUGZ Coffee Cafe.",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "lint": "eslint ./commands/*.js && eslint ./*.js",
-    "test_all": "jshint ./commands/*.js",
-    "format": "npm run json-beautify && npm run js-beautify",
-    "js-beautify": "js-beautify -js -q -r -f ./**.js && js-beautify -js -q -r -f ./commands/**.js",
-    "json-beautify": "js-beautify -js -r -f ./**.json && js-beautify -js -r -f ./commands/storage/**.json"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TKLProjects/jukebot.git"
-  },
-  "keywords": [
-    "discord.js",
-    "bot",
-    "music"
-  ],
-  "author": "Keanu Timmermans",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/TKLProjects/jukebot/issues"
-  },
-  "homepage": "https://github.com/TKLProjects/jukebot#readme",
-  "dependencies": {
-    "better-sqlite3": "^6.0.1",
-    "chalk": "^4.0.0",
-    "discord.js": "^11.6.4",
-    "discord.js-commando": "^0.10.0",
-    "enmap": "^5.2.4",
-    "inquirer": "^7.1.0",
-    "moment": "^2.24.0",
-    "moment-duration-format": "^2.3.2",
-    "eslint": "^6.6.0",
-    "js-beautify": "^1.10.3"
-  }
+    "name": "jukebot",
+    "version": "0.0.1",
+    "description": "A jukebox bot for SMUGZ Coffee Cafe.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "lint": "eslint ./commands/*.js && eslint ./*.js",
+        "test_all": "jshint ./commands/*.js",
+        "format": "npm run json-beautify && npm run js-beautify",
+        "js-beautify": "js-beautify -js -q -r -f ./**.js && js-beautify -js -q -r -f ./commands/**.js",
+        "json-beautify": "js-beautify -js -r -f ./**.json && js-beautify -js -r -f ./commands/storage/**.json"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TKLProjects/jukebot.git"
+    },
+    "keywords": [
+        "discord.js",
+        "bot",
+        "music"
+    ],
+    "author": "Keanu Timmermans",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/TKLProjects/jukebot/issues"
+    },
+    "homepage": "https://github.com/TKLProjects/jukebot#readme",
+    "dependencies": {
+        "better-sqlite3": "^6.0.1",
+        "chalk": "^4.0.0",
+        "discord.js": "^11.6.4",
+        "discord.js-commando": "^0.10.0",
+        "enmap": "^5.2.4",
+        "inquirer": "^7.1.0",
+        "moment": "^2.24.0",
+        "moment-duration-format": "^2.3.2",
+        "eslint": "^6.6.0",
+        "js-beautify": "^1.10.3"
+    }
 }
