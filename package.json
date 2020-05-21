@@ -4,7 +4,6 @@
   "description": "A jukebox bot for SMUGZ Coffee Cafe.",
   "main": "index.js",
   "scripts": {
-
     "start": "node index.js",
     "lint": "eslint ./commands/*.js && eslint ./*.js",
     "test_all": "jshint ./commands/*.js",
