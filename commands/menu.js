@@ -1,9 +1,7 @@
-const {
-    nsfw
-} = require("../config.js");
+/* eslint-disable no-unused-vars */
 const Discord = require("discord.js");
 exports.run = async (client, message, args, level) => {
-    let pages = ['Pages?', 'Page two?', 'Is this page three?'];
+    const pages = ["Pages?", "Page two?", "Is this page three?"];
     let page = 1;
     const embed = new Discord.RichEmbed()
         .setColor(0xffffff)
@@ -11,11 +9,11 @@ exports.run = async (client, message, args, level) => {
         .setDescription(pages[page - 1]);
 
     message.channel.send(embed).then(msg => {
-        msg.react('⬅').then(r => {
-            msg.react('➡')
+        msg.react("⬅").then(r => {
+            msg.react("➡");
 
-            const backwardsFilter = (reaction, user) => reaction.emoji.name == '⬅' && user.id === message.author.id;
-            const forwardsFilter = (reaction, user) => reaction.emoji.name == '➡' && user.id === message.author.id;
+            const backwardsFilter = (reaction, user) => reaction.emoji.name == "⬅" && user.id === message.author.id;
+            const forwardsFilter = (reaction, user) => reaction.emoji.name == "➡" && user.id === message.author.id;
 
             const backwards = msg.createReactionCollector(backwardsFilter, {
                 time: 60000
@@ -24,28 +22,28 @@ exports.run = async (client, message, args, level) => {
                 time: 60000
             });
 
-            backwards.on('collect', r => {
+            backwards.on("collect", r => {
                 if (page === 1) return;
                 page--;
                 msg.reactions.find(reaction => reaction.emoji.name == "⬅")
                     .remove(message.author);
                 embed.setDescription(pages[page - 1]);
                 embed.setFooter(`Page ${page} of ${pages.length}.`);
-                msg.edit(embed)
-            })
+                msg.edit(embed);
+            });
 
-            forwards.on('collect', r => {
+            forwards.on("collect", r => {
                 if (page === pages.length) return;
                 page++;
                 msg.reactions.find(reaction => reaction.emoji.name == "➡")
                     .remove(message.author);
                 embed.setDescription(pages[page - 1]);
                 embed.setFooter(`Page ${page} of ${pages.length}.`);
-                msg.edit(embed)
-            })
+                msg.edit(embed);
+            });
         });
     });
-}
+};
 
 exports.conf = {
     enabled: true,
