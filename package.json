@@ -33,7 +33,7 @@
         "discord.js-commando": "^0.10.0",
         "enmap": "^5.2.4",
         "inquirer": "^7.1.0",
-        "moment": "^2.24.0",
+        "moment": "^2.29.2",
         "moment-duration-format": "^2.3.2",
         "eslint": "^6.6.0",
         "js-beautify": "^1.10.3"
